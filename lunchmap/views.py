@@ -1,3 +1,9 @@
-from django.shortcuts import render
+from django.views import generic
+from .models import Category, Shop
 
-# Create your views here.
+#一覧ページの元となるクラス
+#ListViewによってモデルのページを一覧ページにする事が出来る
+class IndexView(generic.ListView):
+    model=Shop
+    
+    
