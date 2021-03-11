@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 #Categoryモデル(カテゴリ名カラム　autherとの接続カラム　作成日時　更新日時)
 class Category(models.Model):
@@ -34,3 +35,7 @@ class Shop(models.Model):
     
     def __str__(self):
         return self.name
+        
+    def get_absolute_url(self):
+        #reverse関数は引数に指定したファイルがもつURLを自動的に調べられる
+        return reverse('lunchmap:detail',kwargs={'pk':self.pk})
