@@ -7,3 +7,6 @@ class IndexView(generic.ListView):
     model=Shop
     
     
+class DetailView(generic.DetailView):
+    madel=Shop
+    
