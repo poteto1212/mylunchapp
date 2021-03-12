@@ -26,3 +26,10 @@ class CreateView(generic.edit.CreateView):
 class UpdateView(generic.edit.UpdateView):
     model=Shop
     fields='__all__'
+    
+#データベース削除の為のクラスベースビュー
+# success_url = reverse_lazy('lunchmap:index')でリダイレクト先のURLを調べる
+
+class DeleteView(generic.edit.DeleteView):
+    model=Shop
+    success_url = reverse_lazy('lunchmap:index')
