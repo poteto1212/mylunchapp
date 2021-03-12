@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
+    'accounts.apps.AccountsConfig',
     'lunchmap.apps.LunchmapConfig',
     'django.contrib.admin',
     'django.contrib.auth',
